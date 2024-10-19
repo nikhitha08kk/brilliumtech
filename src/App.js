@@ -1,6 +1,7 @@
 
 import './App.css';
 import About from './Components/About';
+// import Abouttitle from './Components/Abouttitle';
 import Brand from './Components/Brand';
 import Category from './Components/Category';
 import Contact from './Components/Contact';
@@ -18,6 +19,7 @@ function App() {
   <LoginHeader/> */}
   <Header/>
   <Home/>
+  {/* <Abouttitle/> */}
   <About/>
   <Category/>
   <Brand/>

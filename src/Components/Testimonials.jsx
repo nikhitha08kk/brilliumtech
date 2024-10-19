@@ -19,10 +19,10 @@ const Testimonials = () => {
     };
 
   return (
-    <div className='testimonial'>
+    <div id="testimonials" className='testimonial'>
       <div><h1 className='test'>Testimonials</h1></div>
-      <div>
-        <div><h1 className='car-title'>Words from our customers</h1></div>
+      <div className='para-box'>
+        <div><h1 className='car-title'>"Words from our customers"</h1></div>
         <Slider {...settings}>
           <div className='col1'>
             <p>

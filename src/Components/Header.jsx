@@ -23,15 +23,15 @@ const Header = () => {
     >
       <header className="header">
         <div className="logo">
-          <h2>Logo</h2>
+          <h3>Logo</h3>
         </div>
         <nav className="navbar">
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#category">Category</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home"><h1>Home</h1></a></li>
+            <li><a href="#about"><h1>About</h1></a></li>
+            <li><a href="#category"><h1>Category</h1></a></li>
+            <li><a href="#testimonials"><h1>Testimonials</h1></a></li>
+            <li><a href="#contact"><h1>Contact</h1></a></li>
           </ul>
         </nav>
       </header>

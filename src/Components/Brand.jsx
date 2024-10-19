@@ -7,14 +7,14 @@ import buildbrand from "../Assets/buildbrand.jpg";
 
 const Brand = () => {
   return (
-    <div className=' brand'>
+    <div id='brand' className=' brand'>
         <h1>Brand</h1>
         <div className='brand-img'>
             <div><img src={paintbrand} alt='b-1'/>
-                <div className='brand-name'>
+                {/* <div className='brand-name'>
                     <button>4 brands</button>
                     <h1>Paints</h1>
-                </div>
+                </div> */}
                 </div>
             <div><img src={toolbrand} alt='b-1'/>
             {/* <div className='brand-name'>

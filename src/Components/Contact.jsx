@@ -5,7 +5,7 @@ import { faPhone, faEnvelope, faClock } from '@fortawesome/free-solid-svg-icons'
 
 const Contact = () => {
   return (
-    <div className='contact'>
+    <div id="contact" className='contact'>
       <div className='no'>
         <FontAwesomeIcon icon={faPhone} /> +123 456 7890 {/* Phone number here */}
       </div>

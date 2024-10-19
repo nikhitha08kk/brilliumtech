@@ -7,12 +7,14 @@
   padding: 20px;
   background-color: #ffa318; /* Main background color for header */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  font-family: 'serif';
 }
 
 /* Logo Styling */
 .logo {
-  width: 150px;
-  height: 150px;
+  width: 50px;
+  height: 50px;
+  margin-left: 38px;
   border-radius: 50%; /* Circular logo */
   background-color: white; /* Logo background */
   display: flex;
@@ -38,7 +40,8 @@
 }
 
 .navbar li {
-  margin: 0 15px; /* Horizontal spacing between nav items */
+  margin: 0 45px; /* Horizontal spacing between nav items */
+  font-size: 40px;
 }
 
 .navbar a {
@@ -53,38 +56,122 @@
   color: #007BFF; /* Hover color */
 }
 
+/* Responsive Styles */
+@media (max-width: 1024px) { /* Tablet view */
+  .navbar li {
+    margin: 0 30px; /* Reduce spacing for tablet */
+    font-size: 30px; /* Slightly smaller font size */
+  }
+
+  .logo {
+    margin-left: 20px; /* Adjust margin for smaller screens */
+  }
+}
+
+@media (max-width: 768px) { /* Mobile view */
+  .header {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .navbar ul {
+    flex-direction: column; /* Stack navbar items vertically */
+    width: 100%; /* Full width */
+    padding: 10px 0; /* Add padding */
+  }
+
+  .navbar li {
+    margin: 10px 0; /* Space between vertical items */
+    font-size: 24px; /* Smaller font size */
+  }
+
+  .logo {
+    margin: 10px 0; /* Add margin to separate from navbar */
+  }
+
+  .navbar a {
+    font-size: 20px; /* Increase link size for readability */
+  }
+}
+
 /* Home Section Styling */
 .home {
   background-color: #eacbc3; /* Background color for the home section */
-  padding: 50px 0; /* Padding for some space around content */
+  padding: 50px 20px; /* Padding for some space around content */
   text-align: center; /* Center align text */
 }
 
-/* Optional Styling for the Home Section's Text */
+/* Styling for the Home Section's Text */
 .home h1 {
-  font-size: 36px;
+  font-size: 36px; /* Font size for heading */
   color: #333; /* Text color for home section */
 }
 
 .home p {
-  font-size: 18px;
+  font-size: 18px; /* Font size for paragraphs */
   color: #555; /* Lighter text color for paragraphs */
-  margin-top: 10px;
+  margin-top: 10px; /* Space above paragraph */
+}
+.home-button {
+
+/* Smaller padding for a more compact button */
+  font-size: 14px; /* Smaller font size */
+  background-color: #333; /* Button background color */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+button .home-button{
+  padding: 6px 12px; 
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
-  /* home */
-  .home{
-    background-color: #eacbc3;
-  
+/* Hover effect for the button */
+.home-button:hover {
+  background-color: #555; /* Slightly lighter background on hover */
+}
 
+
+/* Responsive Design */
+@media (max-width: 768px) { /* Tablet view */
+  .home h1 {
+    font-size: 28px; /* Smaller font size for tablets */
   }
+
+  .home p {
+    font-size: 16px; /* Smaller font size for paragraphs on tablets */
+  }
+
+  .home {
+    padding: 40px 10px; /* Adjust padding for tablets */
+  }
+}
+
+@media (max-width: 480px) { /* Mobile view */
+  .home h1 {
+    font-size: 24px; /* Smaller font size for mobile devices */
+  }
+
+  .home p {
+    font-size: 14px; /* Smaller font size for paragraphs on mobile */
+  }
+
+  .home {
+    padding: 30px 5px; /* Adjust padding for mobile */
+  }
+}
+
 
   /* footer */
   .logo-footer {
-    width: 150px;
-    height: 150px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-color: white;
+    color:#ffa318;
    
     display: flex;
     justify-content: center;
@@ -99,10 +186,42 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    background: linear-gradient(#ffa318, #feb47b);
+
     background-color: #ffa318; /* or any color */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
   
+  }
+ 
+  .social-icons a{
+    text-decoration: none;
+    color: #ddd;
+    background-color: #000000; 
+    display:inline;
+    justify-content:space-around;
+  }
+  @media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Stack items vertically on tablets */
+        align-items: center; /* Center align items */
+    }
+
+    .social-icons {
+        justify-content: center; /* Center the icons */
+        font-size: 20px; /* Reduce icon size on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .social-icons {
+        font-size: 18px; /* Further reduce icon size on mobile */
+
+    }
+    
+    .adrr h1, .adrr h2 {
+        font-size: 16px; /* Adjust font size for address text */
+    }
+}
 
   /* home */
   .home-para{
@@ -122,163 +241,531 @@
       transform: translateX(0); /* Move to the original position */
     }
   }
+  /* about title */
+ 
+
   /* about */
-  .about{
-    display: flex;
-    justify-content: space-between;
+/* Default styles (Desktop view) */
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  font-family: serif;
+}
+.abt{
+  font-family: serif;
+  color: #ffa318;
+}
+.about-para {
+  text-align: center;
+  max-width: 600px; /* Limit the width for better readability */
+  margin: 0 auto;   /* Center the text block */
+  font-family: serif;
+}
+
+.about-para h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-para p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.about-image img {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+}
+
+/* Tablet view (up to 768px wide) */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    padding: 30px;
+    text-align: center; /* Center content for smaller screens */
+  
   }
+
+  .about-para {
+    max-width: 100%;  /* Take full width for smaller screens */
+    margin-bottom: 20px; /* Add spacing below the text block */
+  }
+
+  .about-para h2 {
+    font-size: 30px;  /* Slightly smaller heading */
+  }
+
+  .about-para p {
+    font-size: 16px;  /* Adjust font size for better readability */
+  }
+
+  .about-image img {
+    width: 300px;  /* Smaller image size for tablets */
+  }
+}
+
+/* Mobile view (up to 480px wide) */
+@media (max-width: 480px) {
+  .about {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .about-para h2 {
+    font-size: 24px; /* Smaller heading for mobile */
+  }
+
+  .about-para p {
+    font-size: 14px; /* Smaller text for mobile */
+  }
+
+  .about-image img {
+    width: 100%; /* Full width image for mobile */
+    height: auto;
+  }
+}
+
   /* category */
- .category{
+
+  .category {
     text-align: center;
- }
-  .cat-img{
-    display: flex;
-    justify-content: space-between;
-  }
-  /* brand  */
-  .brand {
-    text-align: center;
-    margin: 20px;
   }
   
-  .brand h1 {
-    margin-bottom: 20px;
+  .cat-title {
+    font-family: serif;
   }
   
-  .brand-img {
+  .cat-img {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 20px; /* Space between images */
   }
   
-  .brand-img div {
-    position: relative; /* Allows positioning of the button and title over the image */
-    width: 200px;
-    height: 250px;
-    border-radius: 10px;
-    /* overflow: hidden; */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  /* Style for each category item */
+  .cat-img div {
+    position: relative; /* Positioning for absolute elements inside */
+    transition: transform 0.3s ease; /* Smooth scaling */
   }
   
-  .brand-img div img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  /* Style for images */
+  .cat-img img {
+    width: 200px; /* Set your desired width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Initial rounded corners */
+    transition: transform 0.3s ease, border-radius 0.3s ease, border 0.3s ease; /* Smooth transitions */
   }
   
+  /* Hover Effect */
+  .cat-img div:hover img {
+    transform: scale(1.05); /* Slightly enlarge the image */
+    border-radius: 50%; /* Make the image round */
+    border: 5px solid pink; /* Add a pink border on hover */
+  }
+  
+  /* Optional styling for category names */
+  .cat-na {
+    margin-top: 5px; /* Space between image and text */
+    font-family: serif; /* You can adjust this font style */
+  }
+  
+
+/* Tablet view (768px and below) */
+@media (max-width: 768px) {
+  .cat-img {
+    justify-content: center; /* Default styles (Desktop view) */
+    .category {
+      text-align: center;
+      padding: 50px 20px;
+    }
+    
+    .cat-title {
+      font-family: serif;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+    
+    /* Flex layout for category images */
+    .cat-img {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; /* Allows items to wrap onto the next line if necessary */
+    }
+    
+    .cat-img div {
+      flex: 1 1 18%; /* Allow each item to take up 18% of the width */
+      margin: 10px; /* Margin between the items */
+      text-align: center;
+    }
+    
+    .cat-img img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      /* border-radius: 10px; */
+      /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+       /* Subtle shadow for images */
+      margin-bottom: 10px;
+      transition: transform 0.3s ease, border-radius 0.3s ease, border 0.3s ease;
+    }
+   
+    
+    .cat-img p {
+      font-size: 18px;
+      color: #555;
+    }
+  
+    
+    /* Tablet view (768px and below) */
+    @media (max-width: 768px) {
+      .cat-img {
+        justify-content: center; /* Center the items on smaller screens */
+      }
+    
+      .cat-img div {
+        flex: 1 1 45%; /* Each item takes up 45% of the width (2 columns) */
+        margin: 15px;
+      }
+    
+      .cat-title {
+        font-size: 30px;
+      }
+    
+      .cat-img img {
+        width: 130px;
+        height: 130px;
+      }
+    
+      .cat-img p {
+        font-size: 16px;
+      }
+    }
+    
+    /* Mobile view (480px and below) */
+    @media (max-width: 480px) {
+      .cat-img {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+      }
+    
+      .cat-img div {
+        flex: 1 1 100%; /* Each item takes up the full width */
+        margin: 15px 0;
+      }
+    
+      .cat-title {
+        font-size: 24px;
+      }
+    
+      .cat-img img {
+        width: 100px;
+        height: 100px;
+      }
+    
+      .cat-img p {
+        font-size: 14px;
+      }
+    }
+    
+  }
+
+  .cat-img div {
+    flex: 1 1 45%; /* Each item takes up 45% of the width (2 columns) */
+    margin: 15px;
+  }
+
+  .cat-title {
+    font-size: 30px;
+  }
+
+  .cat-img img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .cat-img p {
+    font-size: 16px;
+  }
+}
+
+/* Mobile view (480px and below) */
+@media (max-width: 480px) {
+  .cat-img {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .cat-img div {
+    flex: 1 1 100%; /* Each item takes up the full width */
+    margin: 15px 0;
+  }
+
+  .cat-title {
+    font-size: 24px;
+  }
+
+  .cat-img img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cat-img p {
+    font-size: 14px;
+  }
+}
+
+  /* brand  */
+ /* General Styling for Brand Section */
+.brand {
+  text-align: center;
+  margin: 40px;
+  margin-top: 12px;
+  margin-bottom: 200px;
+}
+
+.brand h1 div {
+  margin-bottom: 20px;
+  font-family: serif;
+}
+
+/* Flexbox Layout for Brand Images */
+.brand-img {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  background-color: #eacbc3;
+}
+
+.brand-img div {
+  position: relative; /* For absolute positioning of the button and title */
+  width: 200px;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, border-radius 0.3s ease; /* Transition for hover effect */
+}
+
+.brand-img div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: border-radius 0.3s ease; /* Transition for rounded hover effect */
+}
+
+/* Hover Animation for Images */
+
+
+
+/* Brand Name and Button Styling */
 .brand-name {
-    /* position: absolute;  */
-    /* This positions the title and button over the image */
-    bottom: 10px; /* Moves the content 10px from the bottom */
-    left: 50%;
-    transform: translateX(-50%); /* Centers the content horizontally */
-    text-align: center;
-    color: rgb(169, 22, 22); /* Sets the text color to white */
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: rgb(169, 22, 22); /* Text color */
+}
+
+.brand-name button {
+  background-color: rgba(196, 181, 181, 0.7);
+  color: rgb(18, 232, 136);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.brand-name h2 {
+  margin: 0;
+  font-size: 18px;
+  background-color: rgba(62, 13, 186, 0.5);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Tablet View (768px and below) */
+@media (max-width: 768px) {
+  .brand-img div {
+    width: 150px;
+    height: 200px;
   }
-  
-  .brand-name button {
-    background-color: rgba(196, 181, 181, 0.7); /* Adds a semi-transparent black background */
-    color: rgb(18, 232, 136);
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 5px; /* Adds spacing between the button and the title */
+
+  .brand h1 {
+    font-size: 28px;
   }
-  
+
   .brand-name h2 {
-    margin: 0;
-    font-size: 18px;
-    background-color: rgba(62, 13, 186, 0.5); /* Adds a semi-transparent background to the title */
-    padding: 5px;
-    border-radius: 5px;
+    font-size: 16px;
   }
+}
+
+/* Mobile View (480px and below) */
+@media (max-width: 480px) {
+  .brand-img div {
+    width: 120px;
+    height: 160px;
+  }
+
+  .brand h1 {
+    font-size: 24px;
+  }
+
+  .brand-name h2 {
+    font-size: 14px;
+  }
+
+  .brand-name button {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+
   /* testimonials */
-  .test{
-    text-align: center;
-
-  }
-  .car-title{
+  .test {
     text-align: center;
   }
-
+  
+  .para-box {
+    font-family: serif;
+    background: #eacbc3;
+    padding: 20px; /* Added padding for visual space */
+  }
+  
+  .car-title {
+    text-align: center;
+    font-family: serif;
+  }
+  
   .testimonial {
     text-align: center;
     margin: 50px auto;
+    padding: 20px; /* Added padding for spacing */
   }
   
+  /* Carousel Styling */
   .carousal {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 20px; /* Space between items */
   }
   
+  /* Card Styling */
   .col1, .col2, .col3 {
-    width: 300px;   /* Set the width of the card */
-    height: 200px;  /* Set the height of the card */
-
-    margin: 10px; 
-  background-color: #f0f0f0;
-  color: #333;
-  position: relative;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  display:flex;
-  justify-content: space-around;
-
+    width: 300px; /* Fixed width for desktop */
+    height: 200px; /* Fixed height for desktop */
+    margin: 10px;
+    background-color: #ffffff;
+    color: #333;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 4px 6px #ffb62f1a;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
   }
   
-  /* .col1 {
-    clip-path: polygon(50% 10%, 70% 0%, 100% 80%, 20% 100%);
+  /* Hover Effect */
+  .col1:hover, .col2:hover, .col3:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
   }
   
-  .col2 {
-    clip-path: polygon(20% 0%, 60% 0%, 90% 70%, 20% 80%);
-  }
-  
-  .col3 {
-    clip-path: polygon(20% 0%, 70% 0%, 100% 70%, 50% 100%);
-  }
-   */
+  /* Testimonial Text Styling */
   .col1 p, .col2 p, .col3 p {
     margin: 12px;
     font-size: 16px;
     line-height: 1.5;
     text-align: center;
-    flex-direction: row;
   }
   
-  @media (max-width: 600px) {
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .testimonial {
+      margin: 30px auto; /* Reduced margin for smaller screens */
+    }
+    
+    .car-title {
+      font-size: 24px; /* Smaller font size for the title */
+    }
+  
     .col1, .col2, .col3 {
-      width: 100%;
-      height: auto;
+      width: 80%; /* Wider cards on smaller screens */
+      height: auto; /* Auto height to accommodate text */
     }
   }
+  
+  @media (max-width: 480px) {
+    .col1, .col2, .col3 {
+      width: 95%; /* Even wider cards on mobile */
+      margin: 5px; /* Reduced margin for better spacing */
+    }
+  
+    .car-title {
+      font-size: 20px; /* Further reduced font size for mobile */
+    }
+  
+    .para-box {
+      padding: 10px; /* Less padding for smaller screens */
+    }
+  }
+  
   /* contact */
   .contact {
     display: flex;
     justify-content: space-between;
-    flex-direction:row;
-    gap: 15px; /* Adds space between the rows */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
     background-color: black;
     color: #ffffff;
-    margin-left: 100px;
-    margin-right: 100px;
+    padding: 20px; /* Add padding for spacing */
+    margin-left: 50px; /* Reduced margins for better responsiveness */
+    margin-right: 50px; /* Reduced margins for better responsiveness */
+    border-radius: 8px; /* Optional: add some rounded corners */
   }
   
   .no, .mail, .time {
     font-size: 18px;
     display: flex;
     align-items: center;
-    gap: 10px; /* Adds space between the icon and text */
+    gap: 10px; /* Space between the icon and text */
+    flex: 1; /* Allow items to grow and fill space */
+    min-width: 200px; /* Minimum width for each contact item */
+    margin: 10px; /* Margin between items */
   }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .contact {
+      flex-direction: column; /* Stack items vertically on tablet */
+      align-items: center; /* Center items */
+      margin-left: 20px; /* Reduced margin */
+      margin-right: 20px; /* Reduced margin */
+    }
+    
+    .no, .mail, .time {
+      font-size: 16px; /* Slightly smaller font size */
+      min-width: 100%; /* Allow full width for each item */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .no, .mail, .time {
+      font-size: 14px; /* Further reduced font size for small screens */
+    }
+  }
+  
   /* login */
   .login {
     width: 300px;
@@ -419,5 +906,9 @@
   
   .google-login-btn:active {
     background-color: #e0e0e0;
+  }
+  
+  html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
   }
   

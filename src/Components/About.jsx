@@ -2,9 +2,9 @@ import React from 'react';
 import dana from "../Assets/dana.jpg"
 const About = () => {
   return (
-    <div className='about'>
+    <div id='about' className='about'>
         <div className='about-para'>
-            <h1>About us</h1>
+            <h1 className='abt'>About us</h1>
             <h2>""Excellence in Hardware Since 1993""</h2>
             <p>Our story began 31 years ago with a simple mission: to serve our community with the
                  finest products, exceptional customer service,
